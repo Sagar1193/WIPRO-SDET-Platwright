@@ -3,21 +3,21 @@ let b=10;
 let str="Hello World";
 
 // string functions
-console.log(str);
-console.log(str.length);
-console.log(str.toUpperCase());
-console.log(str.toLowerCase());
-console.log(str.indexOf("o"));
+console.log("String : ",str);
+console.log("String length : ",str.length);
+console.log("Uppercase : ",str.toUpperCase());
+console.log("Lowercase : ",str.toLowerCase());
+console.log("Index of 'o' : ",str.indexOf("o"));
 
 //mahematical operations
-console.log(a+b);
-console.log(a*b);
-console.log(a/b);
-console.log(a-b);
-console.log(a%b);
+console.log("Addition : ",a+b);
+console.log("Multiplication : ",a*b);
+console.log("Division : ",a/b);
+console.log("Subtraction : ",a-b);
+console.log("Modulus : ",a%b);
 
 // logical operations
-console.log(a > b);
-console.log(a < b);
-console.log(a == b);
-console.log(a != b);
+console.log("a > b : ",a > b);
+console.log("a < b : ",a < b);
+console.log("a == b : ",a == b);
+console.log("a != b : ",a != b);
