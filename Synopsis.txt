@@ -39,3 +39,11 @@ JAVASCRIPT :
                     console.log(colors.splice(0, 1));(from 0th index and 1 element)
                     console.log(colors.splice(1, 2));(from 1st index and 2 element)
                     console.log(colors.splice(1, 3));(from 1st index and 3 element)
+            - Reduce method
+                    const fruitBasket = ['apple', 'banana', 'cherry', 'apple', 'apple', 'banana', 'pineapple']; // apple: 3, banana: 3, cherry: 1, pineapple: 1
+                    const tally = fruitBasket.reduce((acc, fruit) => {
+                    acc[fruit] = (acc[fruit] || 0) + 1;
+                    return acc;
+                    }, {}); // intial value of acc is an empty object
+                    console.log(tally);
+            -Login Page including js (eventListener, getElementById)
