@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="loginpage.css" />
+  </head>
+
+  <body>
+    <div class="login-container">
+      <h2>Login</h2>
+
+      <form onsubmit="return validateLogin();">
+        <input type="text" id="username" placeholder="Username" required />
+        <input type="password" id="password" placeholder="Password" required />
+
+        <!-- ADD THIS -->
+        <p id="error" style="color: red"></p>
+
+        <button type="submit">Login</button>
+      </form>
+
+      <div class="extra">
+        <p>Don't have an account? <a href="registerpage.html">Register</a></p>
+      </div>
+    </div>
+
+    <!-- MOVE JS HERE -->
+    <script src="loginpage.js"></script>
+  </body>
+</html>
