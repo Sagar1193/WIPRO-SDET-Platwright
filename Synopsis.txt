@@ -1,0 +1,41 @@
+JAVASCRIPT : 
+    - DAY-1
+            - String Operations
+            - Mathematical Operations
+            - Logical Operations
+            - Functions : 
+                        function add(a, b) {
+                        return a + b;
+                        }
+            - let (block scoped)
+            - var (function scoped)
+            - Arrays : Collections of Elements
+            - For loop , switch-case
+            - GIT Commands :-
+                    For First Time :-
+                            - git init (to initialize git repo)
+                            - git add .(to add all the files to staging)
+                            - git commit -m "message"
+                            - git remote add origin github link (only for the first time)
+                            - git push origin main/master
+                            - git status (to check the status of git)
+                    Later Stages :-
+                            - git add file name (to add a specific file)
+                            - git commit -m "message"
+                            - git push origin main/master
+                            
+    - DAY-2
+            - Template literals (using back ticks and calling the variables using ${})
+                    let f = `The length of a is ${a.length * 2}`;
+            - Filter, Map
+            - Math.random , Math.floor
+                    console.log(Math.floor(Math.random() * 100) + 1); // 1 to 100
+            - Type Casting :-
+                    let strnum = "5";
+                    console.log(Number(strnum));
+                    console.log(String(5));
+            - Push , POP , unshift(to add at first) , shift(to remove at first)
+            - Splice (to get the array of removed Elements)
+                    console.log(colors.splice(0, 1));(from 0th index and 1 element)
+                    console.log(colors.splice(1, 2));(from 1st index and 2 element)
+                    console.log(colors.splice(1, 3));(from 1st index and 3 element)
