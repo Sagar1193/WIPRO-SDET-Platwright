@@ -47,3 +47,41 @@ JAVASCRIPT :
                     }, {}); // intial value of acc is an empty object
                     console.log(tally);
             -Login Page including js (eventListener, getElementById)
+    - Day-4
+            - Promises and Asynchronous JavaScript
+            - In JavaScript, many operations such as API calls, file reading, and timers do not execute immediately. These are called asynchronous operations. To handle them properly, JavaScript provides a feature called Promise.
+            - A Promise represents a value that may be available now, in the future, or never. It has three states:
+            - Pending – Initial state Resolved (Fulfilled) – Operation completed successfully Rejected – Operation failed
+            - Promises help avoid callback hell and make asynchronous code easier to read and manage.
+            - Example using Promise with setTimeout:
+            - function getData() { return new Promise((resolve, reject) => { setTimeout(() => { resolve("Data received"); }, 2000); }); }
+            - getData() .then((data) => { console.log(data); }) .catch((error) => { console.error("Error:", error); });
+            - Fetch API with Promise Chaining
+            - JavaScript provides the Fetch API to get data from servers (APIs). fetch() returns a Promise, which allows us to handle asynchronous API responses using .then() and .catch().
+            - This method is commonly used in automation testing tools like Playwright to validate API responses.
+                🔹Example:fetching data from api
+                        fetch("https://jsonplaceholder.typicode.com/todos")
+                        .then(res => res.json())        // convert response to JSON
+                        .then(data => data.filter(d => d.id % 2 === 0))  // filter even IDs
+                        .then(data => data.map(d => (d.title = "Khushi " + d.title))) // modify title
+                        .then(data => console.log(data)) // print result
+                        .catch(error => console.error("Error fetching data:", error));
+                🔹 Explanation:
+                        fetch() sends request to API. First .then() converts response into JSON. Second .then() filters only even ID records. Third .then() modifies the title of each object. Fourth .then() prints the final data. .catch() handles errors if API fails.
+                        Working with Public APIs using JavaScript (Fetch, Promises, Filter, Map)
+                🔹 In this task, multiple public REST APIs were used to practice real-time data fetching using JavaScript. The objective was to understand how to:
+
+                        1.Fetch live data from APIs using fetch() 2.Handle asynchronous operations using Promises 3.Process API responses using filter() and map()
+                                🔹 APIs Used 1.Catfact Ninja 2.PokeAPI 3.Open Notify 4.ZenQuotes 5.Hipolabs Universities API 6.Dog API 7.CoinGecko 8.Random User Generator 9.REST Countries 10.JSONPlaceholder
+                                🔹 Sample Code Pattern Used fetch("API_URL") .then(res => res.json()) .then(data => data.filter(condition)) .then(data => data.map(transformation)) .then(console.log) .catch(console.error);
+            - Understanding Async/Await, Promises, Fetch API, and Timers in JavaScript
+                In this task, practical implementation of asynchronous JavaScript concepts was performed using real APIs and custom Promises. The focus was on understanding how JavaScript handles non-blocking operations using async/await, fetch(), setTimeout, and setInterval.
+                🔹Concepts Practiced 1.Creating custom Promises and resolving them using setTimeout 2.Using async/await with the Fetch API from JSONPlaceholder 3.Converting Promise chains (.then()) into async/await 4.Converting objects to JSON strings using JSON.stringify 5.Parsing JSON strings back to objects using JSON.parse 6.Understanding and controlling timers using setTimeout, clearTimeout, setInterval, and clearInterval
+                🔹Custom Promise with setTimeout example async function getData() { return await new Promise((resolve, reject) => { if (2 < 3) { setTimeout(() => { resolve("Data received"); }, 2000); } else { reject("not working"); } }); }
+                🔹Fetching Data using Async/Await async function getTodos() { const res = await fetch("https://jsonplaceholder.typicode.com/todos"); const data = await res.json(); return data; }
+                🔹JSON Conversion JSON.stringify(obj); // Object → String JSON.parse(string); // String → Object
+                🔹Timers in JavaScript const timeoutId = setTimeout(() => { console.log("Data received"); }, 5000);
+
+                        clearTimeout(timeoutId);
+                        const i = setInterval(() => { console.log("Checking for new data..."); }, 3000);
+                        clearInterval(i);
