@@ -20,7 +20,7 @@ async function getTodos(url) {
 // getTodos().then(data => console.log(data));
  
 const obj = {
-    name: "Khushi",
+    name: "Sagar",
     age: 23,
     city: "New York"
 }

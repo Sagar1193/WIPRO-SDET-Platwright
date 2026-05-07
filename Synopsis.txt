@@ -47,7 +47,7 @@ JAVASCRIPT :
                     }, {}); // intial value of acc is an empty object
                     console.log(tally);
             -Login Page including js (eventListener, getElementById)
-    - Day-4
+    - DAY-4
             - Promises and Asynchronous JavaScript
             - In JavaScript, many operations such as API calls, file reading, and timers do not execute immediately. These are called asynchronous operations. To handle them properly, JavaScript provides a feature called Promise.
             - A Promise represents a value that may be available now, in the future, or never. It has three states:
@@ -85,3 +85,18 @@ JAVASCRIPT :
                         clearTimeout(timeoutId);
                         const i = setInterval(() => { console.log("Checking for new data..."); }, 3000);
                         clearInterval(i);
+    - DAY-5
+        - OOP's concepts
+        - Encapsulation :- Bundling data and the methods that operate on that data into a single unit (an object).
+        - Inhertance :- A mechanism where one class (a "child" or "subclass") can derive properties and methods from another class (a "parent" or "superclass"). 
+        - Polymorphism :- The ability of different objects to respond to the same method call in their own unique way.
+        - Abstraction :-  Hiding complex implementation details and showing only the essential features to the user. Hiding complex implementation details and showing only the essential features to the user.
+    - DAY-6
+        - Flight Booking Data Cleaner:
+                This program processes raw flight booking data received as unformatted strings. It parses each flight entry, converts it into structured objects containing source, destination, and price details, validates the price values, filters flights within a specific price range, sorts them in ascending order based on price, and finally returns the cleaned data in JSON format. The program demonstrates concepts like string parsing, object creation, type conversion, filtering, sorting, and JSON handling in JavaScript.
+        - E-Commerce Discount Applicator:
+                This project simulates an e-commerce promotion system where discounts are applied to eligible products using callback functions. Products belonging to the Electronics category with prices above a certain threshold receive a 10% discount. The system updates product information, tracks discounted items and total savings, and displays a summary message using template literals. A delayed response using setTimeout simulates real-world server-side processing. The project demonstrates higher-order functions, callbacks, object transformation, and asynchronous behavior in JavaScript.
+        - Movie Stream Analytics:
+                This application analyzes raw movie streaming data provided in string format. It converts the data into structured movie objects, validates view counts, filters movies based on genre and popularity, sorts them according to view count, and returns the processed data as a JSON string. The project focuses on data cleaning and analytics using JavaScript array methods such as map(), filter(), and sort(), along with validation and JSON formatting techniques.
+        - Automated Payroll Processor:
+                This payroll management system automates employee salary processing by calculating taxes and net salaries based on predefined tax rules. A callback function determines applicable tax percentages according to salary ranges. The program updates employee records with tax details, net salary, and employee status classifications. It also calculates the total payout for all employees and simulates delayed payroll processing using setTimeout. The project demonstrates callback functions, object manipulation, template literals, conditional logic, and asynchronous programming concepts in JavaScript.
