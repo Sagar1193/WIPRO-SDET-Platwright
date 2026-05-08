@@ -101,3 +101,21 @@ JAVASCRIPT :
         - Automated Payroll Processor:
                 This payroll management system automates employee salary processing by calculating taxes and net salaries based on predefined tax rules. A callback function determines applicable tax percentages according to salary ranges. The program updates employee records with tax details, net salary, and employee status classifications. It also calculates the total payout for all employees and simulates delayed payroll processing using setTimeout. The project demonstrates callback functions, object manipulation, template literals, conditional logic, and asynchronous programming concepts in JavaScript.
         -Prototype Inhertance
+    - DAY-7
+        - Hoisting :
+                const car = {
+                brand: "Tesla",
+                start: () => console.log("VroomVroom")
+                }
+ 
+                function start() {
+                    console.log("VroomVroom")
+                }
+ 
+                const c1 = new start();
+                const c2 = new start();
+ 
+                start.prototype.stop = function() {
+                console.log("Stop");
+                }
+                
