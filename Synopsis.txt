@@ -26,10 +26,10 @@ JAVASCRIPT :
                             
     - DAY-2
             - Template literals (using back ticks and calling the variables using ${})
-                    let f = `The length of a is ${a.length * 2}`;
+                    let f = `The length of a is ${a.length - 2}`;
             - Filter, Map
             - Math.random , Math.floor
-                    console.log(Math.floor(Math.random() * 100) + 1); // 1 to 100
+                    console.log(Math.floor(Math.random() - 100) + 1); // 1 to 100
             - Type Casting :-
                     let strnum = "5";
                     console.log(Number(strnum));
@@ -118,4 +118,137 @@ JAVASCRIPT :
                 start.prototype.stop = function() {
                 console.log("Stop");
                 }
-                
+
+   - DAY-8
+        - Browser Prompt Methods in JavaScript
+        - User Interaction Handling
+        - Input Collection using prompt()
+        - Output Display using alert() and console.log()
+        - Basic Conditional Logic
+        - JavaScript Runtime Interaction
+        - prompt() is used to take user input from the browser.
+        - alert() is used to display popup messages.
+        - Conditional statements help in validating user inputs.
+        - console.log() is useful for debugging and output checking.
+        - Example:
+                let name = prompt("Enter your name:");
+                console.log(name);
+     - DAY-9
+        - Introduction to TypeScript
+        - TypeScript Compilation
+        - HTML + TypeScript Integration
+        - Variables and Type Annotations
+        - Functions in TypeScript
+        - Node Package Management (npm)
+        - tsconfig.json Configuration
+        - TypeScript is a strongly typed superset of JavaScript.
+        - Type annotations improve code readability and reduce runtime errors.
+        - TypeScript files (.ts) are compiled into JavaScript files (.js).
+        - npm is used to manage dependencies and packages.
+        - tsconfig.json stores compiler configurations.
+        - Commands Used:
+                npm init -y
+                npm install typescript
+                npx tsc --init
+                npx tsc index.ts
+        - Example:
+                let username: string = "Sagar";
+
+                function add(a: number, b: number): number {
+                return a + b;
+                }
+        - Understood TypeScript basics, compilation process, and integration of TypeScript with HTML and Node.js projects.
+
+     - DAY-10
+        - TypeScript Utility Types
+        - Partial Type
+        - Readonly Type
+        - Omit Type
+        - Type Manipulation
+        - Object Property Control
+        - Partial<T> :- Makes all object properties optional.
+                interface User {
+                    name: string;
+                    age: number;
+                }
+
+                let user: Partial<User> = {
+                    name: "Sagar"
+                };
+        - Readonly<T> :- Prevents modification of object properties.
+                const user: Readonly<User> = {
+                    name: "Sagar",
+                    age: 22
+                };
+        - Omit<T> :- Removes specific properties from a type.
+                type UserWithoutAge = Omit<User, 'age'>;
+        - Learned advanced TypeScript utility types used for scalable application development and better type safety.
+
+    - DAY-11
+        - Advanced TypeScript Concepts
+        - Generic Functions
+        - Generic API Wrapper
+        - Conditional Types
+        - infer Keyword
+        - Exhaustiveness Checking
+        - never Type
+        - Index Signatures
+        - Async Higher Order Functions (HOF)
+        - Generic API Wrapper :- Reusable typed API fetch function.
+                async function fetchData<T>(url: string): Promise<T> {
+                    const response = await fetch(url);
+                    return response.json();
+                }
+        - Exhaustiveness Checking :- Ensures all union cases are handled.
+                const exhaustiveCheck: never = status;
+        - Conditional Types with infer :- Used to extract types dynamically.
+                type UnwrapPromise<T> =
+                    T extends Promise<infer U> ? U : T;
+        - Index Signatures :- Supports dynamic object keys.
+                interface UserMetadata {
+                    createdAt: Date;
+                    [key: string]: string | number | boolean | Date;
+                }
+        - Async Higher Order Function :- Used for centralized async error handling.
+                function safeExecute(fn) {
+                    return async (...args) => {
+                        try {
+                            return await fn(...args);
+                        } catch (error) {
+                            return null;
+                        }
+                    };
+                }
+        - Learned enterprise-level TypeScript concepts widely used in React, Node.js, backend APIs, and scalable frontend applications.
+
+    - DAY-12
+        - Introduction to Playwright
+        - Browser Automation Testing
+        - Playwright Installation
+        - Test Execution
+        - Playwright Test Structure
+        - Locators and Assertions
+        - Browser Navigation
+        - UI Automation Testing
+        - Installation Commands :-
+                npm init playwright@latest
+                npx playwright install
+        - Creating a Test Case :-
+                import { test, expect } from '@playwright/test';
+        - Launching a Website :-
+                await page.goto('https://www.techxincorporation.com/');
+        - Locators :- Using accessibility-based locators.
+                page.getByRole('link', { name: /Request/ })
+        - Clicking Elements :-
+                await consultBtn.click();
+        - Assertions :-
+                await expect(page).toHaveURL(
+                    'https://www.techxincorporation.com/contact'
+                );
+        - Running Tests :-
+                npx playwright test
+        - Headed Mode :-
+                npx playwright test --headed
+        - Debug Mode :-
+                npx playwright test --debug
+        - Learned end-to-end browser automation using Playwright, including writing automation scripts, locating UI elements, validating navigation flows, and executing automated test cases.
