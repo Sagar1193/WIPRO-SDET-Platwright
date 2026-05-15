@@ -252,3 +252,48 @@ JAVASCRIPT :
         - Debug Mode :-
                 npx playwright test --debug
         - Learned end-to-end browser automation using Playwright, including writing automation scripts, locating UI elements, validating navigation flows, and executing automated test cases.
+        
+   - DAY-13
+        - Playwright Project Structure
+        - Playwright Configuration
+        - Cross Browser Testing
+        - Express.js Web Application
+        - Login Form Automation
+        - Utility Functions in Playwright
+        - GitHub Actions CI/CD
+        - Environment Variables using dotenv
+        - HTML Report Generation
+        - API/Form Validation
+        - Playwright Configuration :-
+                export default defineConfig({
+                testDir: './tests',
+                reporter: 'html',
+                fullyParallel: true
+                });
+        - Cross Browser Testing :-
+                projects: [
+                { name: 'chromium' },
+                { name: 'firefox' },
+                { name: 'webkit' }
+                ]
+        - Express.js Web Application :-
+                const express = require('express');
+        - Login Route Validation :-
+                if(username.length <= 3 || password.length <= 5)
+        - Utility Function :-
+                async function testLoginForm(page, user, pass)
+        - Playwright Assertions :-
+                await expect(page).toHaveTitle(/Playwright/);
+        - Locators :-
+                page.locator("#username")
+        - GitHub Actions CI/CD :-
+                - name: Run Playwright tests
+                run: npx playwright test
+        - dotenv Configuration :-
+                require('dotenv').config();
+        - Commands Used :-
+                npm install
+                npx playwright test
+                npx playwright show-report
+                node index.js
+        - Learned advanced Playwright automation including reusable utility functions, cross-browser testing, Express integration, login validation, environment configuration, and CI/CD workflow automation.
